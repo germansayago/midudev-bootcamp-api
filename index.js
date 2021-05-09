@@ -31,7 +31,7 @@ let notes = [
 ];
 
 app.get('/', (request, response) => {
-  response.send('<h1>Hello world!</h1>');
+  response.send('<h1>Welcome to API!</h1>');
 });
 
 app.get('/api/notes', (request, response) => {
@@ -84,7 +84,7 @@ app.use((request, response) => {
   });
 });
 
-const PORT = process.env.PORT | 3001;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
